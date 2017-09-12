@@ -1,9 +1,12 @@
-R Notebook
+Predicting Online News Popularity
+(By Prateek Joshi)
 ================
 
 <br>
 
-In this post, I will try to compare some of the widely used ML algorithms by building classification models on the Online News Popularity dataset which is available at UCI Machine Learning Repository. I will be using R here and let's start by loading all the packages/libraries needed for this analysis.
+In this post, I will try to compare some of the widely used ML algorithms by building classification models on the Online News Popularity dataset which is available at UCI Machine Learning Repository (http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity). I will be using R here and let's start by loading all the packages/libraries needed for this analysis.
+
+If you wish even you can reproduce this analysis, just download the data (OnlineNewsPopularity.csv) into your working directory and run the following code chunks. 
 
 ``` r
 library(data.table)
@@ -22,7 +25,7 @@ library(blogdown)
 The data consists of details of online news articles, published by Mashable, with 58 predictors and 1 target variable. The target variable is called 'shares', the number of times an online news has been shared in social media. The target variable is a continuous variable and in order to do classification I have converted it into a new variable of 2 levels based on a threshold value (median of 'shares').
 
 ``` r
-mydata = fread("/home/ubuntu/Desktop/OnlineNewsPopularity.csv") # reading the data
+mydata = fread("OnlineNewsPopularity.csv") # reading the data
 mean(mydata$shares) # 3395.38
 ```
 

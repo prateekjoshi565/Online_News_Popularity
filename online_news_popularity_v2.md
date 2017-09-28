@@ -1,5 +1,4 @@
 Predicting Online News Popularity
-(By Prateek Joshi)
 ================
 
 <br>
